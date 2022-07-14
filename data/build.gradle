@@ -1,22 +1,17 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
-
 }
 
 android {
     compileSdk Libs.defaultBuildVersion.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.navaco.nap"
         minSdk Libs.defaultBuildVersion.minSdkVersion
         targetSdk Libs.defaultBuildVersion.targetSdkVersion
-        versionCode Libs.defaultBuildVersion.versionCode
-        versionName Libs.defaultBuildVersion.versionName
 
         testInstrumentationRunner Libs.defaultBuildVersion.testInstrumentationRunner
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -32,9 +27,6 @@ android {
     kotlinOptions {
         jvmTarget = Libs.defaultBuildVersion.jvmTarget
     }
-    buildFeatures {
-        viewBinding Libs.defaultBuildVersion.viewBinding
-    }
 }
 
 dependencies {
@@ -44,28 +36,18 @@ dependencies {
     implementation Libs.AndroidxDefaultLibs.appcompat
     implementation Libs.AndroidxDefaultLibs.constraintlayout
 
-
-    //material
-    implementation Libs.Google.material
-
     //test
     testImplementation Libs.Test.junit
+
 
     //android test
     androidTestImplementation Libs.AndroidTest.junit
     androidTestImplementation Libs.AndroidTest.espresso
 
-    implementation Libs.NavigationComponents.navigation_fragment
-    implementation Libs.NavigationComponents.navigation_ui
-    androidTestImplementation Libs.NavigationComponents.navigation_testing
-
-    //dagger hilt
-    implementation Libs.dagger.dagger
-    implementation Libs.dagger.hilt
-    kapt Libs.dagger.hilt_compiler
-
-
-    api Libs.coroutines.core
-    api Libs.coroutines.android
+    //add retrofit
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.converter_gson
+    implementation Libs.Retrofit.okhttp
+    implementation Libs.Retrofit.interceptor
 
 }

@@ -37,6 +37,7 @@ dependencies {
     implementation Libs.AndroidxDefaultLibs.core
     implementation Libs.AndroidxDefaultLibs.appcompat
     implementation Libs.AndroidxDefaultLibs.constraintlayout
+    implementation project(path: ':domain')
 
     //test
     testImplementation Libs.Test.junit

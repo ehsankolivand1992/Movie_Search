@@ -1,0 +1,18 @@
+def libs = [:]
+ext.Libs = libs
+
+libs.defaultBuildVersion = [
+        "compileSdkVersion"        : 32,
+        "minSdkVersion"            : 26,
+        "targetSdkVersion"         : 32,
+        "versionCode"              : 1,
+        "versionName"              : "1.0",
+        "testInstrumentationRunner": "androidx.test.runner.AndroidJUnitRunner",
+        "jvmTarget"                : '1.8',
+        "viewBinding"              : true,
+]
+
+
+def versions = [
+
+]

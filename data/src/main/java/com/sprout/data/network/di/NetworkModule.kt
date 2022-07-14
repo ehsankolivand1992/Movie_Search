@@ -19,7 +19,6 @@ const val BASE_URL = "https://api-v2.filmnet.ir/"
 class NetworkModule {
 
 
-
     @Singleton
     @Provides
     fun provideMoviesApi(): MoviesApi {
@@ -28,11 +27,10 @@ class NetworkModule {
         val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
         return Retrofit.Builder()
-            .baseUrl("BASE_URL")
+            .baseUrl(BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(MoviesApi::class.java)
     }
-
 }

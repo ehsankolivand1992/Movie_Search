@@ -47,6 +47,9 @@ dependencies {
 
     //material
     implementation Libs.Google.material
+    implementation project(path: ':data')
+    implementation project(path: ':baseUi')
+    implementation project(path: ':domain')
 
     //test
     testImplementation Libs.Test.junit
@@ -67,5 +70,15 @@ dependencies {
 
     api Libs.coroutines.core
     api Libs.coroutines.android
+
+
+
+    implementation Libs.lifecycle_components.extensions
+    implementation Libs.lifecycle_components.common
+    implementation Libs.lifecycle_components.viewmodel
+
+
+    implementation Libs.liveData.ktx
+
 
 }

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -13,7 +15,6 @@ android {
         testInstrumentationRunner Libs.defaultBuildVersion.testInstrumentationRunner
         consumerProguardFiles "consumer-rules.pro"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -31,29 +32,31 @@ android {
         viewBinding = Libs.defaultBuildVersion.viewBinding
         buildConfig = true
     }
-
 }
 
 dependencies {
 
-
-
     implementation Libs.AndroidxDefaultLibs.core
     implementation Libs.AndroidxDefaultLibs.appcompat
     implementation Libs.AndroidxDefaultLibs.constraintlayout
-
-    //material
-    implementation Libs.Google.material
+    implementation project(path: ':baseUi')
+    implementation project(path: ':data')
 
     //test
     testImplementation Libs.Test.junit
+
 
     //android test
     androidTestImplementation Libs.AndroidTest.junit
     androidTestImplementation Libs.AndroidTest.espresso
 
 
-    implementation Libs.Google.material
+    //dagger hilt
+    implementation Libs.dagger.dagger
+    implementation Libs.dagger.hilt
+    kapt Libs.dagger.hilt_compiler
 
 
+    api Libs.coroutines.core
+    api Libs.coroutines.android
 }

@@ -1,6 +1,6 @@
 package com.sprout.data.network.api
 
-import com.sprout.data.entities.MoviesModel
+import com.sprout.data.entities.RemoteMoviesModel
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -10,5 +10,5 @@ interface MoviesApi {
 
         @Headers("X-Platform: Android")
         @GET("search")
-        suspend fun search(@Query("query") query: String): Response<MoviesModel>
+        suspend fun search(@Query("query") query: String): Response<RemoteMoviesModel>
 }

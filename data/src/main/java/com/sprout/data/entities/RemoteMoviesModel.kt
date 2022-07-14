@@ -1,6 +1,6 @@
 package com.sprout.data.entities
 
-data class MoviesModel(
+data class RemoteMoviesModel(
     val `data`: Data,
     val meta: Meta
 )

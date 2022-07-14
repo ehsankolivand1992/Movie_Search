@@ -3,7 +3,7 @@
 buildscript {
     apply from: rootProject.file('versions.gradle')
     dependencies {
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.5'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
         def nav_version = "2.4.1"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         classpath "org.jlleitschuh.gradle:ktlint-gradle:10.2.1"

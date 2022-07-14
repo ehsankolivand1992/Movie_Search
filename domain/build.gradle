@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -34,7 +36,6 @@ dependencies {
     implementation Libs.AndroidxDefaultLibs.core
     implementation Libs.AndroidxDefaultLibs.appcompat
     implementation Libs.AndroidxDefaultLibs.constraintlayout
-    implementation project(path: ':domain')
 
     //test
     testImplementation Libs.Test.junit
@@ -43,4 +44,14 @@ dependencies {
     //android test
     androidTestImplementation Libs.AndroidTest.junit
     androidTestImplementation Libs.AndroidTest.espresso
+
+
+    //dagger hilt
+    implementation Libs.dagger.dagger
+    implementation Libs.dagger.hilt
+    kapt Libs.dagger.hilt_compiler
+
+
+    api Libs.coroutines.core
+    api Libs.coroutines.android
 }

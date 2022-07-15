@@ -14,23 +14,26 @@ libs.defaultBuildVersion = [
 
 
 def versions = [
-        core              : "1.7.0",
-        appcompat         : "1.4.1",
-        constraintlayout  : "2.1.3",
-        material          : "1.5.0",
-        junit             : "4.13.2",
-        espresso          : "3.4.0",
-        junit_ext         : "1.1.3",
-        navigation        : "2.4.1",
-        retrofit          : "2.9.0",
-        coroutines        : "1.3.9",
-        glide             : "4.13.0",
-        okhttp3           : "5.0.0-alpha.6",
-        dagger_hilt       : "2.42",
-        coroutines_android: "1.3.9",
-        lifecycle_extensions   : "2.2.0",
-        lifecycle              : "2.4.1",
-        livedata               : "2.5.0-alpha02",
+        core                : "1.7.0",
+        appcompat           : "1.4.1",
+        constraintlayout    : "2.1.3",
+        material            : "1.5.0",
+        junit               : "4.13.2",
+        espresso            : "3.4.0",
+        junit_ext           : "1.1.3",
+        navigation          : "2.4.1",
+        retrofit            : "2.9.0",
+        coroutines          : "1.3.9",
+        glide               : "4.13.0",
+        okhttp3             : "5.0.0-alpha.6",
+        dagger_hilt         : "2.42",
+        coroutines_android  : "1.3.9",
+        lifecycle_extensions: "2.2.0",
+        lifecycle           : "2.2.0",
+        livedata            : "2.5.0-alpha02",
+        lottie              : "5.2.0",
+        glide               : "4.13.0",
+
 
 ]
 
@@ -96,8 +99,22 @@ libs.liveData = [
 libs.lifecycle_components = [
         "extensions": "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_extensions",
         "common"    : "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle",
-        "viewmodel" : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"
+        "viewmodel" : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+        "runtime": "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle"
 ]
+
+libs.lottie = [
+        "lottie": "com.airbnb.android:lottie:$versions.lottie"
+
+
+]
+
+libs.Glide = [
+        "glide"   : "com.github.bumptech.glide:glide:$versions.glide",
+        "compiler": "com.github.bumptech.glide:compiler:$versions.glide",
+]
+
+
 
 
 

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -54,6 +56,28 @@ dependencies {
 
 
     implementation Libs.Google.material
+
+    implementation Libs.liveData.ktx
+
+
+    //glide
+    implementation Libs.Glide.glide
+    implementation Libs.Glide.compiler
+
+
+    //dagger hilt
+    implementation Libs.dagger.dagger
+    implementation Libs.dagger.hilt
+    kapt Libs.dagger.hilt_compiler
+
+    api Libs.coroutines.core
+    api Libs.coroutines.android
+
+
+    implementation Libs.lifecycle_components.extensions
+    implementation Libs.lifecycle_components.common
+    implementation Libs.lifecycle_components.viewmodel
+    implementation Libs.lifecycle_components.runtime
 
 
 }

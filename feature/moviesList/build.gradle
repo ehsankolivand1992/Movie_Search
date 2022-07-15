@@ -41,6 +41,7 @@ dependencies {
     implementation Libs.AndroidxDefaultLibs.constraintlayout
     implementation project(path: ':baseUi')
     implementation project(path: ':data')
+    implementation project(path: ':domain')
 
     //test
     testImplementation Libs.Test.junit
@@ -59,4 +60,21 @@ dependencies {
 
     api Libs.coroutines.core
     api Libs.coroutines.android
+
+
+    implementation Libs.NavigationComponents.navigation_fragment
+    implementation Libs.NavigationComponents.navigation_ui
+    androidTestImplementation Libs.NavigationComponents.navigation_testing
+
+    implementation Libs.lifecycle_components.extensions
+    implementation Libs.lifecycle_components.common
+    implementation Libs.lifecycle_components.viewmodel
+
+
+    implementation Libs.liveData.ktx
+
+
+    //glide
+    implementation Libs.Glide.glide
+    implementation Libs.Glide.compiler
 }

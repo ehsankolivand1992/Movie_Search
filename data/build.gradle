@@ -63,4 +63,7 @@ dependencies {
 
     api Libs.coroutines.core
     api Libs.coroutines.android
+
+    implementation Libs.liveData.ktx
+
 }

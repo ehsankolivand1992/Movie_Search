@@ -30,7 +30,6 @@ he goal of the project is to combine popular libraries/tools and demonstrate bes
 * LiveData
 * DataBinding
 * Glide
-* Room
 * Navigation Component
 * lottie
 ## download
